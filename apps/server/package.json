@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "start": "node index.js",
     "lint": "eslint . --ext .js"
@@ -12,7 +13,8 @@
   "license": "ISC",
   "packageManager": "pnpm@10.10.0",
   "dependencies": {
-    "express": "^5.1.0",
-    "@shared/utils": "workspace:*"
+    "@shared/utils": "workspace:*",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
   }
 }

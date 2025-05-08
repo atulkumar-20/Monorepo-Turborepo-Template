@@ -1,6 +1,13 @@
 import { useState, useEffect } from 'react';
+import { Button } from '@shared/ui';
+// Import the testIntegration function
+import { testIntegration } from '@shared/utils';
 
 function App() {
+  // Add this line to test integration
+  const integrationResult = testIntegration();
+  console.log('Utils integration in client:', integrationResult);
+
   const [greeting, setGreeting] = useState('');
   const [status, setStatus] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -34,7 +41,7 @@ function App() {
       <h1 className="text-2xl font-bold bg-indigo-500 text-white p-2">
         Backend Integration Demo
       </h1>
-
+      <Button label="Click me" />
       {loading ? (
         <p>Loading data from server...</p>
       ) : (
